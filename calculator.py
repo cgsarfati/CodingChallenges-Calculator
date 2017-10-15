@@ -29,6 +29,37 @@ def calc(s):
         # need to store #s to var, then put operator b/w them
     # considerations: only need .pop action --> implement Stack
 
+    # str to lst
+    values = s.split()
+
+    # store right-most num
+    operand2 = int(values.pop())
+
+    # loop until expression finished
+    while values:
+
+        # store remaining num for current math
+        operand1 = int(values.pop())
+
+        # store operator
+        operator = values.pop()
+
+        # do math, then update "right hand" value for next time we do math
+        if operator == "+":
+            operand2 = operand1 + operand2
+
+        elif operator == "-":
+            operand2 = operand1 - operand2
+
+        elif operator == "*":
+            operand2 = operand1 * operand2
+
+        elif operator == "/":
+            operand2 = operand1 / operand2
+
+    # return final result
+    return operand2
+
 
 if __name__ == '__main__':
     import doctest
