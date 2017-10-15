@@ -25,6 +25,10 @@ Let's make sure we have non-commutative operators working:
 def calc(s):
     """Evaluate expression."""
 
+    # + 1 2 --> move operator one over --> 1 + 2
+        # need to store #s to var, then put operator b/w them
+    # considerations: only need .pop action --> implement Stack
+
 
 if __name__ == '__main__':
     import doctest
