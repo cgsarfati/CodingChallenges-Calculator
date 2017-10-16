@@ -60,6 +60,11 @@ def calc(s):
     # return final result
     return operand2
 
+# ALTERNATIVE SOLN - RECURSION?
+    # could switch 1st & 2nd items, store somewhere, then slice. repeat.
+    # e.g. [- 9 * 2 3] --> [9 - * 2 3] --> [9 -] [* 2 3]
+            # [9 - ] [2 * 3] --> [9 - 2 *] [3] --> [9 - 2 * 3] --> 9-2*3
+
 
 if __name__ == '__main__':
     import doctest
